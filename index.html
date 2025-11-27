@@ -341,10 +341,10 @@
     }
 
     .hero-owner-photo {
-      flex: 0 0 86px;
-      height: 172px;
-      width: 172px;
-      border-radius: 999px;
+      flex: 0 0 120px;          /* a bit larger, adjust if you like */
+      width: 120px;             /* force a square */
+      height: 120px;
+      border-radius: 18px;      /* same corner feel as your cards */
       overflow: hidden;
       background: #d5d0c7;
       border: 1px solid var(--border-soft);
@@ -353,8 +353,8 @@
     .hero-owner-photo img {
       width: 100%;
       height: 100%;
-      display: block;
       object-fit: cover;
+      object-position: center;  /* keeps his face centered */
     }
 
     .hero-owner-copy {
