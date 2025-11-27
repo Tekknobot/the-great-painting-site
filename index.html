@@ -328,6 +328,76 @@
       object-fit: cover;
     }
 
+    .hero-owner {
+      grid-column: 1 / -1; /* span full width of the hero grid */
+      margin-top: 24px;
+      border-radius: 24px;
+      border: 1px solid var(--border-soft);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 14px 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-owner-photo {
+      flex: 0 0 86px;
+      height: 86px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #d5d0c7;
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-owner-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-owner-copy {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .hero-owner-name {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .hero-owner-meta {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .hero-owner-copy p + p {
+      margin-top: 6px;
+    }
+
+    @media (max-width: 780px) {
+      .hero-owner {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-owner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-owner-photo {
+        flex: 0 0 80px;
+        height: 80px;
+      }
+    }
+
     /* Sections */
 
     section {
@@ -977,6 +1047,29 @@
             <img src="images/hero-portuguese-light.jpg" alt="Sunlit staricase with warm painted walls" />
           </div>
         </aside>
+
+      <div class="hero-owner">
+        <figure class="hero-owner-photo">
+          <img src="images/Augusto.png" alt="Augusto, owner of The Great Painting Ltd., smailing with a paintbrush." />
+        </figure>
+
+        <div class="hero-owner-copy">
+          <div class="hero-owner-name">Augusto · Owner &amp; Lead Painter</div>
+          <div class="hero-owner-meta">From Portugal to Toronto · 30+ years on the brush</div>
+          <p>
+            Augusto is the painter behind The Great Painting. Born and raised in Portugal, he started
+            learning the trade as a teenager, working on family homes, small storefronts, and coastal
+            buildings before moving to Toronto decades ago.
+          </p>
+          <p>
+            Over the years he’s painted just about everything — condo interiors, heritage trim, cottage
+            exteriors, cafés, offices, and full-house repaints. Clients know him for careful prep,
+            clean edges, and a calm, respectful presence in their homes. Most days you’ll still find him
+            on site with the crew, brush in hand, checking every finish up close.
+          </p>
+        </div>
+      </div>
+
       </section>
 
       <!--- Work / Jobs --->
