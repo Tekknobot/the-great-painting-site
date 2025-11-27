@@ -341,11 +341,15 @@
     }
 
     .hero-owner-photo {
-      flex: 0 0 120px;          /* a bit larger, adjust if you like */
-      width: 172px;             /* force a square */
-      height: 172px;
-      aspect-ratio: 1 / 1;
-      border-radius: 18px;      /* same corner feel as your cards */
+      /* stop flex from forcing its own size */
+      flex: 0 0 auto;
+
+      /* make it a square */
+      width: 172px;          /* tweak to taste */
+      aspect-ratio: 1 / 1;   /* keeps it perfectly square */
+      height: auto;
+
+      border-radius: 18px;   /* same corners as card */
       overflow: hidden;
       background: #d5d0c7;
       border: 1px solid var(--border-soft);
@@ -355,7 +359,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;  /* keeps his face centered */
+      object-position: center;
     }
 
     .hero-owner-copy {
